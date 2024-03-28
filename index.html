@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <title>Tamagotchi</title>
+</head>
+<body>
+  <h1>Create an animal</h1>
+  <div class="input">
+    <input type="text" id="name" placeholder="Place the name" required>
+    <select name="pets" id="pets" class="choose" required>
+      <option value="">Choose your animal type</option>
+      <option value="Nynco">Nynco</option>
+      <option value="Aielhound">Aielhound</option>
+      <option value="Dragco">Dragco</option>
+    </select>
+    <button type="submit" id="save-pet">Save</button>
+  </div>
+  <!-- <div id="message-box"></div> -->
+
+  <div id="animalCardsContainer"></div>
+  
+</body>
+</html>

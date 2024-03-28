@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Lotta",
+    "type": "nynco",
+    "state": {
+      "tiredness": 50,
+      "hunger": 14,
+      "loneliness": 40,
+      "happiness": 70
+    },
+    "imageUrl": "image/nynco.webp"
+  },
+  {
+    "id": 1,
+    "name": "jesper",
+    "type": "aielhound",
+    "state": {
+      "tiredness": 50,
+      "hunger": 50,
+      "loneliness": 50,
+      "happiness": 50
+    },
+    "imageUrl": "image/aielhound.webp"
+  },
+  {
+    "id": 1,
+    "name": "Charlotta",
+    "type": "dragco",
+    "state": {
+      "tiredness": 50,
+      "hunger": 50,
+      "loneliness": 50,
+      "happiness": 50
+    },
+    "imageUrl": "image/dragco.webp"
+  },
+  {
+    "id": 1,
+    "name": "Peppe",
+    "type": "nynco",
+    "state": {
+      "tiredness": 50,
+      "hunger": 0,
+      "loneliness": 30,
+      "happiness": 90
+    },
+    "imageUrl": "image/nynco.webp"
+  }
+]
