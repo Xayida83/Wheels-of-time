@@ -70,9 +70,9 @@ class Animal {
 class Nynco extends Animal {
   constructor(id, name, tiredness, hunger, loneliness, happiness) {
     super(id, name, "Nynco", {
-      feed: { hungerChange: 18, message: "slukar i sin maten" },
-      play: { lonelinessChange: 10, happinessChange: 20, message: "springer vilt och fritt" },
-      nap: { tirednessChange: 25, message: "snarkar högt" },
+      feed: { hungerChange: 18, message: "flicked its tail, it ensnared the ethereal meal, consuming it with a glow of arcane delight." },
+      play: { lonelinessChange: 10, happinessChange: 20, message: "leaps through the air that challenge gravity, laughter echoing in the ether." },
+      nap: { tirednessChange: 25, message: "curled beneath the boughs of an ageless tree, it slumbered, a guardian of forgotten tales." },
     }, "image/nynco.webp", tiredness, hunger, loneliness, happiness);
   }
 }
@@ -80,9 +80,9 @@ class Nynco extends Animal {
 class Aielhound extends Animal {
   constructor(id, name, tiredness, hunger, loneliness, happiness) {
     super(id, name, "Aielhound", {
-      feed: { hungerChange: 8, message: "slukar med glädje sin specialmat" },
-      play: { lonelinessChange: 15, happinessChange: 20, message: "springer vilt och fritt" },
-      nap: { tirednessChange: 25, message: "snarkar högt under sin vila" },
+      feed: { hungerChange: 8, message: "tackled his meal with the ferocity of a warrior, leaving nothing behind." },
+      play: { lonelinessChange: 15, happinessChange: 20, message: "chased the wind in a dance of power and grace, a sight to behold, free and unbound." },
+      nap: { tirednessChange: 25, message: " slept, in the embrace of the earth, dreams echoing the ancient songs of its kind." },
     }, "image/aielhound.webp", tiredness, hunger, loneliness, happiness);
   }
    // Exempel på överriden metod, om nödvändigt
@@ -95,9 +95,9 @@ class Aielhound extends Animal {
 class Dragco extends Animal {
   constructor(id, name, tiredness, hunger, loneliness, happiness) {
     super(id, name, "Dragco", {
-      feed: { hungerChange: 10, message: "glupsar i sin maten" },
-      play: { lonelinessChange: 10, happinessChange: 20, message: "flyger vilt och fritt" },
-      nap: { tirednessChange: 25, message: "andas rök i sömnen" },
+      feed: { hungerChange: 10, message: "slurped that meal down faster than you can say 'Feast'!" },
+      play: { lonelinessChange: 10, happinessChange: 20, message: "darted and swooped through the air, a blur of joy and freedom." },
+      nap: { tirednessChange: 25, message: "snored with the gentle rumble of a distant thunder, deep in dreamland." },
     }, "image/dragco.webp", tiredness, hunger, loneliness, happiness);
   }
 }
