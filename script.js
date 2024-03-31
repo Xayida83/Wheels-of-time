@@ -122,7 +122,7 @@ class Aielhound extends Animal {
     super(id, name, "Aielhound", {
       feed: { hungerChange: 30, happinessChange: 10, tirednessChange: 4, lonelinessChange: 5, message: "tackled his meal with the ferocity of a warrior, leaving nothing behind." },
       play: { lonelinessChange: 50, happinessChange: 30, hungerChange: 5, tirednessChange: 5, message: "chased the wind in a dance of power and grace, a sight to behold, free and unbound." },
-      nap: { tirednessChange: 50, happinessChange: 3, hungerChange: 3, loneliness: 1, message: "slept, in the embrace of the earth, dreams echoing the ancient songs of its kind." },
+      nap: { tirednessChange: 50, happinessChange: 3, hungerChange: 3, lonelinessChange: 1, message: "slept, in the embrace of the earth, dreams echoing the ancient songs of its kind." },
     }, "image/aielhound.webp", tiredness, hunger, loneliness, happiness);
   }
   updateWithTimeInterval() {
