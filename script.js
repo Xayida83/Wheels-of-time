@@ -16,7 +16,7 @@ class Animal {
       this.imageUrl = imageUrl;
       setInterval(() => {
         this.updateWithTimeInterval();
-      }, 10000);
+      }, 100000);
   }
   
 
@@ -65,7 +65,7 @@ class Animal {
 
       setTimeout(() => {
         messageBox.removeChild(messageText);
-      }, 600000);
+      }, 10000);
   } else {
     console.log("Kunde inte hitta meddelandeboxen för djuret med ID:", this.id);
   }
@@ -101,15 +101,15 @@ class Nynco extends Animal {
     super(id, name, "Nynco", {
       feed: { hungerChange: 25, happinessChange: 2, tirednessChange: 2, lonelinessChange: 5, message: "flicked its tail, it ensnared the ethereal meal, consuming it with a glow of arcane delight." },
       play: { lonelinessChange: 25, happinessChange: 25, hungerChange: 2, tirednessChange: 2, message: "leaps through the air that challenge gravity, laughter echoing in the ether." },
-      nap: { tirednessChange: 50, happinessChange: 5, hungerChange:2,  message: "curled beneath the boughs of an ageless tree, it slumbered, a guardian of forgotten tales." },
+      nap: { tirednessChange: 50, happinessChange: 5, hungerChange:2, lonelinessChange: 1, message: "curled beneath the boughs of an ageless tree, it slumbered, a guardian of forgotten tales." },
     }, "image/nynco.webp", tiredness, hunger, loneliness, happiness);
   }
 
   updateWithTimeInterval() {
     this.state.tiredness = Math.min(this.state.tiredness + 1, this.maxValue);
     this.state.hunger = Math.min(this.state.hunger + 1, this.maxValue); 
-    this.state.loneliness = Math.min(this.state.loneliness +10, this.maxValue); 
-    this.state.happiness = Math.min(this.state.happiness -10)
+    this.state.loneliness = Math.min(this.state.loneliness + 10, this.maxValue); 
+    this.state.happiness = Math.min(this.state.happiness - 10)
     this.updateState();
     const cardElement = document.getElementById(`animal-card-${this.id}`);
     updateAnimalCard(this, cardElement);
@@ -121,15 +121,15 @@ class Aielhound extends Animal {
   constructor(id, name, tiredness, hunger, loneliness, happiness) {
     super(id, name, "Aielhound", {
       feed: { hungerChange: 30, happinessChange: 10, tirednessChange: 4, lonelinessChange: 5, message: "tackled his meal with the ferocity of a warrior, leaving nothing behind." },
-      play: { lonelinessChange: 50, happinessChange: 30, hungerChange: 5, tiredness: 5, message: "chased the wind in a dance of power and grace, a sight to behold, free and unbound." },
-      nap: { tirednessChange: 50, happinessChange: 3, hungerChange: 3, loneliness: 0, message: "slept, in the embrace of the earth, dreams echoing the ancient songs of its kind." },
+      play: { lonelinessChange: 50, happinessChange: 30, hungerChange: 5, tirednessChange: 5, message: "chased the wind in a dance of power and grace, a sight to behold, free and unbound." },
+      nap: { tirednessChange: 50, happinessChange: 3, hungerChange: 3, loneliness: 1, message: "slept, in the embrace of the earth, dreams echoing the ancient songs of its kind." },
     }, "image/aielhound.webp", tiredness, hunger, loneliness, happiness);
   }
   updateWithTimeInterval() {
     this.state.tiredness = Math.min(this.state.tiredness + 5, this.maxValue);
     this.state.hunger = Math.min(this.state.hunger + 5, this.maxValue); 
     this.state.loneliness = Math.min(this.state.loneliness + 15, this.maxValue); 
-    this.state.happiness = Math.min(this.state.happiness - 16, this.maxValue); 
+    this.state.happiness = Math.min(this.state.happiness - 10, this.maxValue); 
 
     this.updateState();
     const cardElement = document.getElementById(`animal-card-${this.id}`);
@@ -141,9 +141,9 @@ class Aielhound extends Animal {
 class Dragco extends Animal {
   constructor(id, name, tiredness, hunger, loneliness, happiness) {
     super(id, name, "Dragco", {
-      feed: { hungerChange: 90, happinessChange: 30, tirednessChange: 0, lonelinessChange: 10, message: "slurped that meal down faster than you can say 'Feast'!" },
+      feed: { hungerChange: 90, happinessChange: 30, tirednessChange: 1, lonelinessChange: 10, message: "slurped that meal down faster than you can say 'Feast'!" },
       play: { lonelinessChange: 30, happinessChange: 25, hungerChange: 40, tirednessChange: 35, message: "darted and swooped through the air, a blur of joy and freedom." },
-      nap: { tirednessChange: 20, happinessChange: 5, hungerChange: 0, lonelinessChange: 0, message: "snored with the gentle rumble of a distant thunder, deep in dreamland." },
+      nap: { tirednessChange: 20, happinessChange: 5, hungerChange: 1, lonelinessChange: 1, message: "snored with the gentle rumble of a distant thunder, deep in dreamland." },
     }, "image/dragco.webp", tiredness, hunger, loneliness, happiness);
   }
   updateWithTimeInterval() {
@@ -327,6 +327,8 @@ let updateAnimalCard = (animal, cardElement) => {
   }
   Object.keys(animal.state).forEach((key) => {
     const progressBar = cardElement.querySelector(`progress#${key}`);
+    console.log(progressBar);
+    console.log(animal.state[key]);
     progressBar.value = animal.state[key];
   });
 }
